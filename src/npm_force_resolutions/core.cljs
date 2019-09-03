@@ -76,7 +76,7 @@
   (let [json-format (nodejs/require "json-format")]
     (-> (.parse js/JSON json)
         (json-format (js-obj "type" "space"
-                             "size" 2))
+                             "size" 4))
         (string/replace #"\\\\\^" "^")
         (string/replace #" +\n" ""))))
 
